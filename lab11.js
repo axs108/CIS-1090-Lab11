@@ -33,25 +33,27 @@ for ( let i = 0; i < words.length; i++ ){
         lookup[firstLetter] = [];
     }
 
-    // 💬
+    // uses the push method to add a certain first letter if its not found
     lookup[firstLetter].push(word);
 }
 
-// 💬
+// establishing the entry variable as searching and finding first letters
 for ( firstLetter in lookup ){
    let entry = lookup[firstLetter];
 
-   // 💬
+   // finds the item using the filter function
+   //uses the indexOf method to return the first position of the filtered index
+
    entry = entry.filter((item, index) => entry.indexOf(item) === index);
 
-   // 💬
+   // Establishes the sort function anonymously
    entry = entry.sort();
 
-   // 💬
+   // Searches through each item
    lookup[firstLetter] = entry;
 }
 
-// 💬
+// Sorts the given array in alphabetical order
 for ( letter of Object.keys(lookup).sort() ){
     console.log(letter, lookup[letter]);
 }
